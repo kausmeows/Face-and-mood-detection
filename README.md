@@ -19,3 +19,11 @@ landmarking facemask.png![image](https://user-images.githubusercontent.com/82315
 ## Mood Detection and real time face-masking.
 ![image](https://user-images.githubusercontent.com/82315953/137724400-daf1f090-3f9f-4807-9636-be9f06c8f37e.png)
 
+## Happy face detection - 
+
+Screenshot 2021-10-18 at 5.20.40 PM<img width="986" alt="image" src="https://user-images.githubusercontent.com/82315953/137725515-e8bf4baa-9003-4bdb-8056-4fb41a61d3f6.png">
+
+## Sad face detection -
+
+Screenshot 2021-10-18 at 5.23.43 PM<img width="988" alt="image" src="https://user-images.githubusercontent.com/82315953/137725565-54ec352d-c7c7-4341-b0d5-368fa97204bc.png">
+
