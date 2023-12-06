@@ -17,7 +17,7 @@ cap = cv2.VideoCapture(0)
 
 detector = dlib.get_frontal_face_detector()
 
-predictor = dlib.shape_predictor("/Users/kaustubh/Desktop/ML Bootcamp/datasets/shape_predictor_68_face_landmarks.dat")
+predictor = dlib.shape_predictor("/Users/kaustubh/Desktop/Face-and-mood-detection/shape_predictor_68_face_landmarks.dat")
 
 cap = cv2.VideoCapture(0)
 
@@ -36,7 +36,16 @@ while (True):
         
         expression = np.array([[point.x - face.left(), point.y - face.top()] for point in landmarks.parts()[17:]])
         
-        print(model.predict([expression.flatten()]))
+        mood = model.predict([expression.flatten()])
+        mood_str = mood.item()
+        
+        # Draw rectangle around the face
+        x1, y1, x2, y2 = face.left(), face.top(), face.right(), face.bottom()
+        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+
+        # Put mood label on the rectangle
+        cv2.putText(frame, mood_str, (x1, y1-10),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36, 255, 12), 2)
 
    if ret: # the ret value has to be true if we want to reflect something
 
